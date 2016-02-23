@@ -28,7 +28,7 @@ set MODEL_TECH F:/modeltech_10c/win32
 
 解压缩后，复制到modelsim安装目录下，我的复制目录是（F:\modeltech_10c\gcc-4.2.1-mingw32vc9），打开该文件后能够直接看到bin/doc/include/info/lib/libexec/man/share文件夹，上面这些基本工作做完后，就可以编译.dll文件了。
 
-5.编译.dll文件。在 vsim 命令行下输入
+5.编译.dll文件。在命令行下输入
 ```
 F:/modeltech_10c/gcc-4.2.1-mingw32vc9/bin/g++.exe -DQUESTA -W -shared -Bsymbolic -I $MODEL_TECH/../include  $UVM_HOME/src/dpi/uvm_dpi.cc -o  $UVM_HOME/lib/uvm_dpi.dll $MODEL_TECH/mtipli.dll -lregex
 ```
@@ -53,3 +53,8 @@ vsim -c -sv_lib $UVM_HOME/lib/uvm_dpi work.hello_world_example
 选 run 100ns
 
 ![hello_world](image/hello_world.png)
+
+9.结束仿真，在命令行下输入
+```
+quit -sim
+```
