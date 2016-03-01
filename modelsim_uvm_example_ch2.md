@@ -73,10 +73,10 @@ end
 ```
 修改前运行结果如下，无“data is drived”信息出现：
 
-！[run_before](image/run_before.png)
+![run_before](image/run_before.png)
 
 修改前运行结果如下，无“data is drived”信息出现：
 
-！[run_after](image/run_after.png)
+![run_after](image/run_after.png)
 
 这正是 SV 和 V 的不同之一，容易被人忘掉，Verilog 会为软件工具指定时间单位，SystemVeilog 要给时间指定单位，意在消除延迟的不明确性。所以这里造成错误的原因是延迟没加单位，使程序不能正常运行。
